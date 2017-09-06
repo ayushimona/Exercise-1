@@ -1,0 +1,17 @@
+
+#Hands On Exercise
+      
+      library("xml2")
+      library("rvest")
+      cricket_link = "http://stats.espncricinfo.com/ci/content/records/284248.html"
+      cricket_file=read_html(cricket_link)
+      cricket_table=html_nodes(cricket_file,"table")
+      cricket_table_final<-html_table(cricket_table[1],fill=TRUE)
+      View(cricket_table_final)
+      class(cricket_table_final)
+      cricket_table.df <- as.data.frame(cricket_table_final)      
+      cricket_table.df[with(cricket_table.df, order(Runs, Player)), ]      
+      View(cricket_table.df)      
+      Top_Five_Scorers<-c(cricket_table.df$Player[1], cricket_table.df$Player[2], cricket_table.df$Player[3], cricket_table.df$Player[4], cricket_table.df$Player[5])
+      Top_Five_Scorers
+      
