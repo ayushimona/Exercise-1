@@ -1,0 +1,22 @@
+#Hands on Exercise 1
+
+install.packages("data.table")
+install.packages("datasets")
+testDF <- women   #Data copied into another dataset so that original fields are not afected in dataframe
+View(testDF)
+
+id <- 0
+for(i in 1:nrow(testDF))
+{
+  if
+  (testDF$height[i]>65.0 & testDF$weight[i]<136.7)
+  {
+    id<- id+1
+  }
+} 
+print("Number of women satisfying the criteria are")
+print(id)
+
+#Checking rows
+testDF$height
+nrow(testDF)
