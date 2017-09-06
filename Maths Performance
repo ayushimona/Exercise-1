@@ -1,0 +1,49 @@
+#Hands On Exercise
+Name <- c('anita', 'anisha', 'alisha', 'amita', 'amrita')
+Age <- c(15,16,17,18,19)
+MathMark <- c(34,35,32,31,28)
+ScienceMark <- c(55,57,55,74,67)
+TotalMark <- c(100,101,121,114,122)
+Bigdata <- data.frame(Name,Age,MathMark, ScienceMark, TotalMark)
+Bigdata
+View(Bigdata)
+Bigdata$TotalMark <-Bigdata$MathMark+Bigdata$ScienceMark
+View(Bigdata)
+
+Bigdata$pct_math <- round(100*Bigdata$MathMark/Bigdata$TotalMark)
+View(Bigdata)
+Bigdata <- Bigdata[,c(2,6)]     
+View(Bigdata)
+Bigdata <- Bigdata[,c(2:6)]
+Bigdata <- Bigdata(,c())
+names_Bigdata <- names(Bigdata)
+names(Bigdata) <- c('a','b')
+View(Bigdata)
+names(Bigdata) <- names_Bigdata
+View(Bigdata)
+vector1 <- seq(1,10, by=2)
+vecttor1[3] <-100
+
+v_col <- names(Bigdata)
+v_col[3] <- "NewMaths"
+View(Bigdata)
+
+Bigdata$Age=exp(Bigdata$Age)
+
+View(Bigdata)
+class(Bigdata$Name)
+Bigdata$Name <- as.character(Bigdata$Name)
+class(Bigdata$Name)
+
+
+s1 <-Bigdata$Age>=16
+
+Bigdata <- Bigdata[s1,]
+View(Bigdata)
+
+?sample
+
+sample_Bigdata <- sample(1:nrow(Bigdata),3,replace=F)
+sample_Bigdata
+sample_Bigdata
+
