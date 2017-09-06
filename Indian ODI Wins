@@ -1,0 +1,15 @@
+#Hands on Exercise 2
+
+install.packages("rvest")
+input_wiki <- read.csv(file="C:\Users\Ayushi Mona\Documents\Term IV\AMMA2017\Data\Wiki_Matches.csv") 
+
+# Saving table as CSV file and importing it
+matchesWon=0  
+#Initiating the tracking counter
+for(i in 1:nrow(input_wiki))
+{
+  matchesWon <- matchesWon+input_wiki$India[i]
+}
+print(paste('Total no of ODIs won by India are', matchesWon))
+
+
