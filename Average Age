@@ -1,0 +1,20 @@
+
+#Hands On Exercise
+
+getwd()
+setwd("C:\Users\Ayushi Mona\Documents\Term IV\AMMA2017\Data\") 
+std_per <-read.csv(file="students.csv",head=T)
+View(std_per)
+
+#using similar replacement datasetdue to unavailability of original dataset
+#using a for loop
+
+sumAge <- 0
+i <- 0
+for(i in 1:nrow(std_per))
+{
+  sumAge <- sumAge + std_per$Age[i]
+}
+averageAge <- sumAge/nrow(std_per)
+print("The average Age of class is: ")
+print(averageAge)
