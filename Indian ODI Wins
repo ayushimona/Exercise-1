@@ -1,7 +1,7 @@
 #Hands on Exercise 2
 
 install.packages("rvest")
-input_wiki <- read.csv(file="C:\Users\Ayushi Mona\Documents\Term IV\AMMA2017\Data\Wiki_Matches.csv") 
+input_wiki <- read.csv(file="C:\\Users\\Ayushi Mona\\Documents\\Term IV\\AMMA2017\\Data\\Wiki_Matches.csv") 
 
 # Saving table as CSV file and importing it
 matchesWon=0  
